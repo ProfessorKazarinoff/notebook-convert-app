@@ -1,0 +1,38 @@
+%% ENGR114_lab_assignment.tplx %%
+%
+% Built off of the article.tplx template %
+
+((* extends 'article.tplx' *))
+
+
+%===============================================================================
+% ENGR114 Lab Instructions Template
+%===============================================================================
+
+((* block docclass *))
+    \documentclass[11pt]{article}
+((* endblock docclass *))
+
+((* block packages *))
+    ((* include 'installed_packages.tplx' *))
+    ((( super() )))
+((* endblock packages *))
+
+((* block definitions *))
+    ((* include 'lab_title.tplx' *))
+    ((* include 'header_and_footer.tplx' *))
+    ((* include 'title_sec_formatting.tplx' *))
+    ((* block title *))
+        \title{Problem Solving 101 with Python}
+        \author{Peter D. Kazarinoff, PhD}
+        \date{}
+    ((* endblock title *))
+    ((( super() )))
+((* endblock definitions *))
+
+((* block margins *))
+    ((* include 'margins.tplx' *))
+((* endblock margins *))
+
+((* block maketitle *))
+((* endblock maketitle *))

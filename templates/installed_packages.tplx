@@ -1,0 +1,15 @@
+%% installed packages_rev2.tplx %%
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{framed,color}
+\definecolor{shadecolor}{rgb}{.8,.8,.8}
+\usepackage{titlesec}
+% no indent on any paragraphs, vertical spacing between paragraphs is set to 1em
+\usepackage[]{parskip}  % add [skip=1em] if the compiler will allow.
+
+% for MATLAB syntax highlighting
+\usepackage{listings}             % Include the listings-package
+\definecolor{mygray}{rgb}{0.8,0.8,0.8} % color values Red, Green, Blue
+\definecolor{mygreen}{RGB}{28,172,0}
+\definecolor{mylilas}{RGB}{170,55,241}

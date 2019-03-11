@@ -1,0 +1,8 @@
+%% hyperref formatting.tplx %%
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}

@@ -1,0 +1,3 @@
+%% lab_title.tplx %% 
+ 
+\newcommand{\labtitle}{Lab07 Taylor Series} 

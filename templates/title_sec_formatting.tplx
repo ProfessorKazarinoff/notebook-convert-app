@@ -1,0 +1,9 @@
+%% title_sec_formatting.tplx %%
+
+\titleformat{\section}[block]{\LARGE\bfseries\filcenter}{}{1em}{}
+
+\titleformat{\subsection}[hang]{\Large\bfseries}{}{1em}{}
+\titlespacing{\subsection}{-1.4em}{1.5em}{1em}
+
+\titleformat{\subsubsection}[hang]{\large\bfseries}{}{1em}{}
+\titlespacing{\subsubsection}{-1.1em}{1.5em}{0.8em}

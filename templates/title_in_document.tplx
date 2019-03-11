@@ -1,0 +1,6 @@
+%% title_in_document.tplx %%
+
+\begingroup  
+  \centering
+  \LARGE \labtitle\\[1.1em]
+\endgroup
