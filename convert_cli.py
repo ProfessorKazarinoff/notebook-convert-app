@@ -13,8 +13,8 @@ Arugments are:
 """
 
 from pathlib import Path
-
-from gooey import Gooey, GooeyParser
+from argparse import ArgumentParser
+#from gooey import Gooey, GooeyParser
 
 from convert_funcs import (
     file_to_nbnode,
@@ -30,18 +30,15 @@ def main():
     notebook_select_help_msg = "Select a Jupyter notebook file (.ipynb-file) to process"
     template_select_help_msg = "Select a template (.tplx-file) to apply"
 
-    my_parser = GooeyParser(description=desc)
-    my_parser.add_argument(
-        "Notebook_to_Convert", help=notebook_select_help_msg, widget="FileChooser"
-    )
-    my_parser.add_argument(
-        "Output_Directory", help="Directory to save output", widget="DirChooser"
-    )
-    my_parser.add_argument(
-        "Template_File", help=template_select_help_msg, widget="FileChooser"
-    )
+    parser = ArgumentParser()
+    parser.add_argument(
+        "--infile", help=notebook_select_help_msg)
+    parser.add_argument(
+        "--outdir", help="Directory to save output")
+    parser.add_argument(
+        "--template", help=template_select_help_msg)
 
-    args = my_parser.parse_args()
+    args = parser.parse_args()
     nbnode = file_to_nbnode(args.Notebook_to_Convert)
     # construct output .tex file file path
     outfile_Path = Path(args.Output_Directory, Path(args.Notebook_to_Convert).stem)
