@@ -2,20 +2,18 @@
 """
 convert_cli.py
 
-This cli utility convets a jupyter notebook .ipynb-file into a .tex file. 
+This cli utility convets a jupyter notebook .ipynb-file into a .tex-file. 
 
-Arugments are:
+CLI Arugments are:
 
 --infile
 --outdir
 --template
 
-@author: peter.kazarinoff
 """
 
 from pathlib import Path
 from argparse import ArgumentParser
-#from gooey import Gooey, GooeyParser
 
 from convert_funcs import (
     file_to_nbnode,
