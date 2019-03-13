@@ -40,13 +40,16 @@ def main():
         "--template", help=template_select_help_msg)
 
     args = parser.parse_args()
-    nbnode = file_to_nbnode(args.infile)
-    # construct output .tex file file path
+    
+    # construct output .tex-file file path
     outfile_Path = Path(args.outdir, Path(args.infile).stem)
 
     # construct template file path
     template_file_Path = Path(args.template)
 
+    # convert input notebook to a notebook node object
+    nbnode = file_to_nbnode(args.infile)
+    
     # create lab_title.tplx file where the lab title from the input notebook file name is derived
     lab_title_str = extract_lab_title(args.infile)
     create_lab_title_template(lab_title_str, "lab_title.tplx")
